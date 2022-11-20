@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$2kl6rg&@r=@5ti6-35b08ru$+w0dy46q$b__uxk*)y+hs*0hb'
+SECRET_KEY = 'mmau1=5z5=77s0psx!%+os07a7bjwy*zxz1v+3c4ud$cyp18f0'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -130,3 +130,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
